@@ -5,6 +5,7 @@ Prepare for technical interviews with AI practice, mock interviews, and feedback
 > **Status:** all 10 phases complete. Real accounts; a database-backed question bank; AI answers, explanations and code review; the Screen Assistant (on-device OCR); voice questions and answers with speech-pattern feedback; the Electron floating assistant; mock interviews with AI feedback and stored reports; and history, a live dashboard, data export and retention controls. Every screen uses real data; there is no sample data left. See the [roadmap](#roadmap).
 
 ## Docs
+- [Setup guide (step by step)](docs/SETUP.md)
 - [Architecture, folder structure & API](docs/ARCHITECTURE.md)
 - [Database design](docs/DATABASE.md)
 - [UI design system & wireframes](docs/UI_DESIGN.md)
