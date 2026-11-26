@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-electron/
+release/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+
+# Self-hosted OCR engine (copied from node_modules by apps/client/scripts/copy-ocr-assets.mjs)
+apps/client/public/ocr/

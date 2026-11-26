@@ -1,0 +1,20 @@
+{
+  "name": "@aia/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Floating desktop assistant (Electron) that hosts the AI Interview Assistant web app",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json && electron .",
+    "start": "electron .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "electron": "^45.5.0",
+    "@types/node": "^26.6.10",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  }
+}

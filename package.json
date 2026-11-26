@@ -1,0 +1,30 @@
+{
+  "name": "ai-interview-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI Interview Assistant – prepare for and perform better in technical interviews",
+  "workspaces": [
+    "packages/shared",
+    "apps/server",
+    "apps/client",
+    "apps/desktop"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "build:shared": "npm run build -w @aia/shared",
+    "dev:server": "npm run dev -w @aia/server",
+    "dev:client": "npm run dev -w @aia/client",
+    "dev": "npm run build:shared && concurrently -n shared,server,client -c gray,green,cyan \"npm run dev -w @aia/shared\" \"npm run dev -w @aia/server\" \"npm run dev -w @aia/client\"",
+    "build": "npm run build:shared && npm run build -w @aia/server && npm run build -w @aia/client && npm run build -w @aia/desktop",
+    "typecheck": "npm run build:shared && npm run typecheck --workspaces --if-present",
+    "test": "npm run build:shared && npm run test --workspaces --if-present",
+    "seed": "npm run build:shared && npm run seed -w @aia/server",
+    "dev:desktop": "npm run dev -w @aia/desktop"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7",
+    "typescript": "^7.0.2"
+  }
+}
